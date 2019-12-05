@@ -1,0 +1,37 @@
+{
+	"Rules":[
+		{"name": "MissingPrivilages",
+		"source_indices": ["drools"],
+		"target_index": "virtusa007",
+		"keywords": "",
+		"host_os_family": "Mac OS",
+		"username": "Sathish",
+		"event_type": "MISSING_PRIVILEGES",
+		"host_os_name": "",
+		"agent_type": "",
+		"host_os_platform": ""
+		},
+		{"name": "SSLEXCEPTION",
+		"source_indices": ["drools"],
+		"target_index": "virtusa007",
+		"keywords": "",
+		"host_os_family": "LINUX/UNIX",
+		"username": "",
+		"event_type": "SSL_EXCEPTION",
+		"host_os_name": "RedHat",
+		"agent_type": "",
+		"host_os_platform": ""
+		},
+		{"name": "BADHEADERS",
+		"source_indices": ["drools"],
+		"target_index": "virtusa007",
+		"keywords": "",
+		"host_os_family": "",
+		"username": "",
+		"event_type": "BAD_HEADERS",
+		"host_os_name": "",
+		"agent_type": "drools",
+		"host_os_platform": "Application Server"
+		}
+	]
+}

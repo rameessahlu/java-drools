@@ -1,0 +1,74 @@
+import com.virtusa.model.IndicesAndKeywords;
+
+rule "Rule 01"
+	when 
+		indicesAndKeywordsObject: IndicesAndKeywords(option=="AllSources")
+	then
+		String[] sourceIndices = new String[]{"drools"};
+		String[] keywords = new String[]{"**An Account**"};
+		
+		indicesAndKeywordsObject.setSourceIndices(sourceIndices);
+		indicesAndKeywordsObject.setKeywords(keywords);
+		indicesAndKeywordsObject.setTargetIndex("thinkpad1");
+		
+		indicesAndKeywordsObject.setHostOSFamily("");
+		indicesAndKeywordsObject.setUserName("");
+		indicesAndKeywordsObject.setEventType("");
+		indicesAndKeywordsObject.setHostOSName("");
+		indicesAndKeywordsObject.setAgentType("");
+		indicesAndKeywordsObject.setHostOSPlatform("");
+	end
+rule "Rule 02"
+	when 
+		indicesAndKeywordsObject: IndicesAndKeywords(option=="MissingPrivilages")
+	then
+		String[] sourceIndices = new String[]{"drools"};
+		String[] keywords = new String[]{""};
+		
+		indicesAndKeywordsObject.setSourceIndices(sourceIndices);
+		indicesAndKeywordsObject.setKeywords(keywords);
+		indicesAndKeywordsObject.setTargetIndex("thinkpad1");
+		
+		indicesAndKeywordsObject.setHostOSFamily("Mac OS");
+		indicesAndKeywordsObject.setUserName("Sathish");
+		indicesAndKeywordsObject.setEventType("MISSING_PRIVILEGES");
+		indicesAndKeywordsObject.setHostOSName("");
+		indicesAndKeywordsObject.setAgentType("");
+		indicesAndKeywordsObject.setHostOSPlatform("");
+	end
+rule "Rule 03"
+	when 
+		indicesAndKeywordsObject: IndicesAndKeywords(option=="SSLEXCEPTION")
+	then
+		String[] sourceIndices = new String[]{"drools"};
+		String[] keywords = new String[]{""};
+		
+		indicesAndKeywordsObject.setSourceIndices(sourceIndices);
+		indicesAndKeywordsObject.setKeywords(keywords);
+		indicesAndKeywordsObject.setTargetIndex("thinkpad1");
+		
+		indicesAndKeywordsObject.setHostOSFamily("LINUX/UNIX");
+		indicesAndKeywordsObject.setUserName("");
+		indicesAndKeywordsObject.setEventType("SSL_EXCEPTION");
+		indicesAndKeywordsObject.setHostOSName("RedHat");
+		indicesAndKeywordsObject.setAgentType("");
+		indicesAndKeywordsObject.setHostOSPlatform("");
+	end
+rule "Rule 04"
+	when 
+		indicesAndKeywordsObject: IndicesAndKeywords(option=="BADHEADERS")
+	then
+		String[] sourceIndices = new String[]{"drools"};
+		String[] keywords = new String[]{""};
+		
+		indicesAndKeywordsObject.setSourceIndices(sourceIndices);
+		indicesAndKeywordsObject.setKeywords(keywords);
+		indicesAndKeywordsObject.setTargetIndex("thinkpad1");
+		
+		indicesAndKeywordsObject.setHostOSFamily("");
+		indicesAndKeywordsObject.setUserName("");
+		indicesAndKeywordsObject.setEventType("BAD_HEADERS");
+		indicesAndKeywordsObject.setHostOSName("");
+		indicesAndKeywordsObject.setAgentType("drools");
+		indicesAndKeywordsObject.setHostOSPlatform("Application Server");
+	end
